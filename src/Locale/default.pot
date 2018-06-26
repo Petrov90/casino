@@ -1,0 +1,1026 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-10-05 05:56+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/CasinoLikesController.php:57
+#: Controller/CasinoVisitsController.php:64
+msgid "Casino has been deleted from your list"
+msgstr ""
+
+#: Controller/CasinoLikesController.php:73
+#: Controller/CasinoVisitsController.php:81
+#: Controller/GlobalusersController.php:175
+msgid "Something going wrong"
+msgstr ""
+
+#: Controller/CasinosController.php:244
+msgid "real_casino.review_and_booking"
+msgstr ""
+
+#: Controller/CasinosController.php:244
+msgid "online_casino.review_and_bonus"
+msgstr ""
+
+#: Controller/GlobalusersController.php:89
+msgid "Profile could not be update. Please try again"
+msgstr ""
+
+#: Controller/GlobalusersController.php:98
+msgid "Profile updated successfully"
+msgstr ""
+
+#: Controller/GlobalusersController.php:125
+msgid "Please select atleast option"
+msgstr ""
+
+#: Controller/GlobalusersController.php:127
+msgid "Please select atleast one option"
+msgstr ""
+
+#: Controller/GlobalusersController.php:132
+msgid "Preference updated successfully"
+msgstr ""
+
+#: Controller/GlobalusersController.php:167
+msgid "Image updated successfully"
+msgstr ""
+
+#: Controller/MessagesController.php:110;139
+msgid "Message could not be saved. Please try again"
+msgstr ""
+
+#: Controller/MessagesController.php:117;145
+msgid "Message has been sent"
+msgstr ""
+
+#: Controller/UsersController.php:106;174
+msgid "Your username or password is incorrect."
+msgstr ""
+
+#: Controller/UsersController.php:168;199;1178
+msgid "Thanks for contact with us"
+msgstr ""
+
+#: Controller/UsersController.php:313;316
+msgid "Thanks for your valuable review."
+msgstr ""
+
+#: Controller/UsersController.php:939
+msgid "This email does not exists"
+msgstr ""
+
+#: Controller/UsersController.php:995;1002
+msgid "This url has been used"
+msgstr ""
+
+#: Controller/UsersController.php:1153
+msgid "Thanks for uplaoding the image, We will publish after admin approval"
+msgstr ""
+
+#: Controller/Admin/CasinosController.php:139;216
+msgid "The casino has been saved."
+msgstr ""
+
+#: Controller/Admin/CasinosController.php:144;220;294;392
+#: Controller/Admin/RealCasinosController.php:205
+msgid "The casino could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/Admin/CasinosController.php:290;387
+msgid "The casino has been updated."
+msgstr ""
+
+#: Controller/Admin/CasinosController.php:445
+msgid "The casino has been deleted."
+msgstr ""
+
+#: Controller/Admin/CasinosController.php:447
+msgid "The casino could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/RealCasinosController.php:195
+msgid "The casino has been moved to real casino."
+msgstr ""
+
+#: Controller/Admin/RealCasinosController.php:236
+msgid "The real casino has been deleted."
+msgstr ""
+
+#: Controller/Admin/RealCasinosController.php:238
+msgid "The real casino could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:21
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:24
+msgid "Unable to add the user."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:50
+msgid "Information updated successfully."
+msgstr ""
+
+#: Controller/Admin/UsersController.php:53
+msgid "Unable to update your information."
+msgstr ""
+
+#: Controller/Component/CaptchaComponent.php:279
+msgid "Cannot use image captcha as GD library is not enabled! Set $this->settings['type'] => 'math' in order to show a simple math captcha instead!"
+msgstr ""
+
+#: Controller/Component/CaptchaComponent.php:283
+msgid "For best results use GD library with freetype font enabled!"
+msgstr ""
+
+#: Controller/Component/CaptchaComponent.php:285
+msgid "CAPTCHA COMPONENT - For best results use GD library with Freetype enabled!"
+msgstr ""
+
+#: Controller/Component/CaptchaComponent.php:288
+msgid "Font file does not exist at location: "
+msgstr ""
+
+#: Model/Table/CasinosTable.php:178
+#: Model/Table/UsersTable.php:177
+msgid "These files extension are allowed: .gif, .jpeg, .png, .jpg"
+msgstr ""
+
+#: Model/Table/ReviewsTable.php:77;78
+msgid "Please select rating."
+msgstr ""
+
+#: Model/Table/ReviewsTable.php:79;80
+#: Model/Table/UsersTable.php:126
+msgid "Please enter message."
+msgstr ""
+
+#: Model/Table/UsersTable.php:82;83
+msgid "Please enter full name"
+msgstr ""
+
+#: Model/Table/UsersTable.php:85
+msgid "Please enter email"
+msgstr ""
+
+#: Model/Table/UsersTable.php:101;102
+msgid "Please enter city"
+msgstr ""
+
+#: Model/Table/UsersTable.php:104;105
+msgid "Please select country"
+msgstr ""
+
+#: Model/Table/UsersTable.php:107;108
+msgid "Please accept term & conditions"
+msgstr ""
+
+#: Model/Table/UsersTable.php:117
+msgid "Please enter name."
+msgstr ""
+
+#: Model/Table/UsersTable.php:124
+msgid "Please enter subject."
+msgstr ""
+
+#: Model/Table/UsersTable.php:125
+msgid "Please select department."
+msgstr ""
+
+#: Model/Table/UsersTable.php:136
+msgid "Please enter full name."
+msgstr ""
+
+#: Model/Table/UsersTable.php:139;189
+msgid "Please enter E-mail."
+msgstr ""
+
+#: Model/Table/UsersTable.php:142;192
+msgid "E-mail must be valid."
+msgstr ""
+
+#: Model/Table/UsersTable.php:147;148
+msgid "Please enter password."
+msgstr ""
+
+#: Model/Table/UsersTable.php:159
+msgid "Password or Confirm password does not match."
+msgstr ""
+
+#: Model/Table/UsersTable.php:163;164
+msgid "Please enter confirm password."
+msgstr ""
+
+#: Model/Table/UsersTable.php:173
+msgid "Please select an image."
+msgstr ""
+
+#: Template/Admin/Casinos/casino.ctp:63
+#: Template/Admin/Casinos/index.ctp:71
+#: Template/Admin/RealCasinos/index.ctp:65
+#: Template/Masters/index.ctp:42
+#: Template/Masters/view.ctp:73;98;135
+msgid "Edit"
+msgstr ""
+
+#: Template/Admin/Casinos/casino.ctp:64
+#: Template/Admin/Casinos/index.ctp:72
+#: Template/Admin/RealCasinos/index.ctp:66
+#: Template/Masters/edit.ctp:5
+#: Template/Masters/index.ctp:43
+#: Template/Masters/view.ctp:74;99;136
+msgid "Delete"
+msgstr ""
+
+#: Template/Admin/Casinos/casino.ctp:64
+#: Template/Admin/Casinos/index.ctp:72
+#: Template/Admin/Casinos/view.ctp:5
+#: Template/Admin/RealCasinos/index.ctp:66
+#: Template/Admin/RealCasinos/view.ctp:5
+#: Template/Masters/edit.ctp:7
+#: Template/Masters/index.ctp:43
+#: Template/Masters/view.ctp:5;74;99;136
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Admin/Casinos/casino.ctp:84
+#: Template/Admin/Casinos/index.ctp:91
+#: Template/Admin/Element/pagination.ctp:8
+#: Template/Admin/RealCasinos/index.ctp:87
+msgid "Prev"
+msgstr ""
+
+#: Template/Admin/Casinos/casino.ctp:107
+#: Template/Admin/Casinos/index.ctp:114
+#: Template/Admin/Element/pagination.ctp:31
+#: Template/Admin/RealCasinos/index.ctp:110
+msgid "Next"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:3
+#: Template/Admin/RealCasinos/add.ctp:3
+#: Template/Admin/RealCasinos/view.ctp:3
+#: Template/Masters/add.ctp:3
+#: Template/Masters/edit.ctp:3
+#: Template/Masters/index.ctp:3;25
+#: Template/Masters/view.ctp:3;64;89;120
+msgid "Actions"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:4
+msgid "Edit Casino"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:5
+msgid "Delete Casino"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:6
+msgid "List Casinos"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:7
+msgid "New Casino"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:14
+#: Template/Admin/RealCasinos/view.ctp:14
+msgid "Title"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:18
+msgid "Aaddres"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:22
+#: Template/Admin/RealCasinos/view.ctp:34
+msgid "Url"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:26
+#: Template/Admin/RealCasinos/view.ctp:26
+msgid "Email"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:30
+msgid "Image"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:34
+#: Template/Admin/RealCasinos/view.ctp:46
+#: Template/Masters/view.ctp:36;61;86;111
+msgid "Id"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:38
+#: Template/Masters/view.ctp:40;118
+msgid "Created"
+msgstr ""
+
+#: Template/Admin/Casinos/view.ctp:43
+msgid "Description"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:3
+msgid "Name*"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:7
+msgid "Surname *"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:12
+msgid "Genre"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:16
+msgid "Age from"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:19
+msgid "Age to"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:24
+msgid "Zip code"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:25
+msgid "City"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:27
+msgid "Province"
+msgstr ""
+
+#: Template/Admin/Element/searching_form.ctp:32
+msgid "Opleidingsniveau"
+msgstr ""
+
+#: Template/Admin/RealCasinos/add.ctp:4
+#: Template/Admin/RealCasinos/view.ctp:6
+msgid "List Real Casinos"
+msgstr ""
+
+#: Template/Admin/RealCasinos/add.ctp:10
+msgid "Add Real Casino"
+msgstr ""
+
+#: Template/Admin/RealCasinos/add.ctp:22
+#: Template/Admin/Users/add.ctp:11
+#: Template/Masters/add.ctp:26
+#: Template/Masters/edit.ctp:32
+#: Template/Users/signup.ctp:11
+#: View/Helper/FormHelper.php:1807
+msgid "Submit"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:4
+msgid "Edit Real Casino"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:5
+msgid "Delete Real Casino"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:7
+msgid "New Real Casino"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:18
+msgid "Address"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:22
+msgid "Phone"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:30
+msgid "Website"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:38
+msgid "Country Name"
+msgstr ""
+
+#: Template/Admin/RealCasinos/view.ctp:42
+msgid "State Name"
+msgstr ""
+
+#: Template/Admin/Users/add.ctp:6
+#: Template/Users/signup.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: Template/Casinos/json/casino_online_json.ctp:62
+#: Template/Element/message_list.ctp:51
+msgid "<i class=\"fa fa-caret-left\"></i>"
+msgstr ""
+
+#: Template/Casinos/json/casino_online_json.ctp:85
+#: Template/Element/message_list.ctp:74
+msgid "<i class=\"fa fa-caret-right\"></i>"
+msgstr ""
+
+#: Template/Element/footer.ctp:26
+msgid "footer.company"
+msgstr ""
+
+#: Template/Element/footer.ctp:28
+msgid "footer.about"
+msgstr ""
+
+#: Template/Element/footer.ctp:29
+msgid "footer.contact"
+msgstr ""
+
+#: Template/Element/footer.ctp:35
+msgid "footer.community"
+msgstr ""
+
+#: Template/Element/footer.ctp:37
+msgid "footer.top_users"
+msgstr ""
+
+#: Template/Element/footer.ctp:38
+msgid "footer.new_reviews"
+msgstr ""
+
+#: Template/Element/footer.ctp:39
+msgid "footer.add_casino"
+msgstr ""
+
+#: Template/Element/footer.ctp:45
+msgid "footer.legal"
+msgstr ""
+
+#: Template/Element/footer.ctp:47
+msgid "footer.terms_of_use"
+msgstr ""
+
+#: Template/Element/footer.ctp:48
+msgid "footer.privacy_policy"
+msgstr ""
+
+#: Template/Element/footer.ctp:54
+msgid "footer.language"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:11
+msgid "menu.destinations"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:12
+msgid "menu.online_casinos"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:13
+msgid "menu.bonuses"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:14
+msgid "menu.write_a_review"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:18
+msgid "menu.dashboard"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:19
+msgid "menu.logout"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:21
+msgid "menu.signup"
+msgstr ""
+
+#: Template/Element/header_menu.ctp:22
+msgid "menu.login"
+msgstr ""
+
+#: Template/Element/normal_casino_review.ctp:126
+msgid "Comment deleted successfully"
+msgstr ""
+
+#: Template/Element/normal_casino_review.ctp:194
+msgid "Comment posted successfully"
+msgstr ""
+
+#: Template/Error/error400 - Copy.ctp:8
+#: Template/Error/error500 - Copy.ctp:8
+msgid "error.page_not_found"
+msgstr ""
+
+#: Template/Error/error400 - Copy.ctp:9
+#: Template/Error/error500 - Copy.ctp:9
+msgid "error.back_to_homepage"
+msgstr ""
+
+#: Template/Layout/angular.ctp:32
+msgid "Destinations"
+msgstr ""
+
+#: Template/Layout/angular.ctp:33
+msgid "Online Casinos"
+msgstr ""
+
+#: Template/Layout/angular.ctp:34
+msgid "Promotions"
+msgstr ""
+
+#: Template/Layout/angular.ctp:35
+msgid "Write a review"
+msgstr ""
+
+#: Template/Layout/angular.ctp:37
+msgid "Signup"
+msgstr ""
+
+#: Template/Layout/angular.ctp:37
+msgid "Login"
+msgstr ""
+
+#: Template/Masters/add.ctp:4
+#: Template/Masters/edit.ctp:10
+#: Template/Masters/view.ctp:6
+msgid "List Masters"
+msgstr ""
+
+#: Template/Masters/add.ctp:5
+#: Template/Masters/edit.ctp:11
+#: Template/Masters/view.ctp:8
+msgid "List Parent Masters"
+msgstr ""
+
+#: Template/Masters/add.ctp:6
+#: Template/Masters/edit.ctp:12
+#: Template/Masters/view.ctp:9
+msgid "New Parent Master"
+msgstr ""
+
+#: Template/Masters/add.ctp:7
+#: Template/Masters/edit.ctp:13
+#: Template/Masters/index.ctp:5
+#: Template/Masters/view.ctp:10
+msgid "List Casino Amenities"
+msgstr ""
+
+#: Template/Masters/add.ctp:8
+#: Template/Masters/edit.ctp:14
+#: Template/Masters/index.ctp:6
+#: Template/Masters/view.ctp:11
+msgid "New Casino Amenity"
+msgstr ""
+
+#: Template/Masters/add.ctp:9
+#: Template/Masters/edit.ctp:15
+#: Template/Masters/index.ctp:7
+#: Template/Masters/view.ctp:12
+msgid "List Casino Gambling Options"
+msgstr ""
+
+#: Template/Masters/add.ctp:10
+#: Template/Masters/edit.ctp:16
+#: Template/Masters/index.ctp:8
+#: Template/Masters/view.ctp:13
+msgid "New Casino Gambling Option"
+msgstr ""
+
+#: Template/Masters/add.ctp:16
+msgid "Add Master"
+msgstr ""
+
+#: Template/Masters/edit.ctp:22
+#: Template/Masters/view.ctp:4
+msgid "Edit Master"
+msgstr ""
+
+#: Template/Masters/index.ctp:4
+#: Template/Masters/view.ctp:7
+msgid "New Master"
+msgstr ""
+
+#: Template/Masters/index.ctp:12
+msgid "Masters"
+msgstr ""
+
+#: Template/Masters/index.ctp:41
+#: Template/Masters/view.ctp:72;97;134
+msgid "View"
+msgstr ""
+
+#: Template/Masters/index.ctp:51
+msgid "previous"
+msgstr ""
+
+#: Template/Masters/index.ctp:53
+msgid "next"
+msgstr ""
+
+#: Template/Masters/view.ctp:5
+msgid "Delete Master"
+msgstr ""
+
+#: Template/Masters/view.ctp:20;112
+#: Template/Users/contact_us.ctp:60
+msgid "Name"
+msgstr ""
+
+#: Template/Masters/view.ctp:24;113
+msgid "Slug"
+msgstr ""
+
+#: Template/Masters/view.ctp:28;114
+msgid "Type"
+msgstr ""
+
+#: Template/Masters/view.ctp:32
+msgid "Parent Master"
+msgstr ""
+
+#: Template/Masters/view.ctp:44;119
+msgid "Modified"
+msgstr ""
+
+#: Template/Masters/view.ctp:48;115
+msgid "Is Active"
+msgstr ""
+
+#: Template/Masters/view.ctp:49;53
+msgid "Yes"
+msgstr ""
+
+#: Template/Masters/view.ctp:49;53
+msgid "No"
+msgstr ""
+
+#: Template/Masters/view.ctp:52;116
+msgid "Is Deleted"
+msgstr ""
+
+#: Template/Masters/view.ctp:57
+msgid "Related Casino Amenities"
+msgstr ""
+
+#: Template/Masters/view.ctp:62;87
+msgid "Casino Id"
+msgstr ""
+
+#: Template/Masters/view.ctp:63;88
+msgid "Master Id"
+msgstr ""
+
+#: Template/Masters/view.ctp:82
+msgid "Related Casino Gambling Options"
+msgstr ""
+
+#: Template/Masters/view.ctp:107
+msgid "Related Masters"
+msgstr ""
+
+#: Template/Masters/view.ctp:117
+msgid "Parent Id"
+msgstr ""
+
+#: Template/Users/city_view.ctp:150
+msgid "No casino has been added yet"
+msgstr ""
+
+#: Template/Users/contact_us.ctp:89
+msgid "Select Department"
+msgstr ""
+
+#: Template/Users/index.ctp:13
+msgid "homepage.discover_amazing_casinos"
+msgstr ""
+
+#: Template/Users/index.ctp:16
+msgid "homepage.type_in_the_destination_or_casino name"
+msgstr ""
+
+#: Template/Users/index.ctp:17
+msgid "homepage.search"
+msgstr ""
+
+#: Template/Users/index.ctp:61
+msgid "homepage.play_now"
+msgstr ""
+
+#: Template/Users/index.ctp:66;209
+msgid "homepage.view_more"
+msgstr ""
+
+#: Template/Users/index.ctp:197
+msgid "homepage.was_in"
+msgstr ""
+
+#: Template/Users/index.ctp:198
+msgid "homepage.visited"
+msgstr ""
+
+#: Template/Users/index.ctp:199
+msgid "homepage.review"
+msgstr ""
+
+#: View/Helper/CaptchaHelper.php:48
+msgid "Can't read? Reload"
+msgstr ""
+
+#: View/Helper/CaptchaHelper.php:50
+msgid "<p>Enter security code shown above:</p>"
+msgstr ""
+
+#: View/Helper/CaptchaHelper.php:52
+msgid "<p>Answer Simple Math</p>"
+msgstr ""
+
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Error/error400.ctp:38
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr ""
+
+#: Controller/Component/AuthComponent.php:461
+msgid "You are not authorized to access that location."
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:154
+msgid "Missing CSRF token cookie"
+msgstr ""
+
+#: Controller/Component/CsrfComponent.php:158
+msgid "CSRF token mismatch."
+msgstr ""
+
+#: Error/ExceptionRenderer.php:251
+msgid "Not Found"
+msgstr ""
+
+#: Error/ExceptionRenderer.php:253
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: I18n/Number.php:90
+msgid "{0,number,#,###.##} KB"
+msgstr ""
+
+#: I18n/Number.php:92
+msgid "{0,number,#,###.##} MB"
+msgstr ""
+
+#: I18n/Number.php:94
+msgid "{0,number,#,###.##} GB"
+msgstr ""
+
+#: I18n/Number.php:96
+msgid "{0,number,#,###.##} TB"
+msgstr ""
+
+#: I18n/Number.php:88
+msgid "{0,number,integer} Byte"
+msgid_plural "{0,number,integer} Bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} from now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:80
+msgid "{0} ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} after"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:83
+msgid "{0} before"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:114
+msgid "just now"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:151
+msgid "about a second ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:152
+msgid "about a minute ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:153
+msgid "about an hour ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:154;332
+msgid "about a day ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:155;333
+msgid "about a week ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:156;334
+msgid "about a month ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:157;335
+msgid "about a year ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:168
+msgid "in about a second"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:169
+msgid "in about a minute"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:170
+msgid "in about an hour"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:171;346
+msgid "in about a day"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:172;347
+msgid "in about a week"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:173;348
+msgid "in about a month"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:174;349
+msgid "in about a year"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:304
+msgid "today"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:370
+msgid "%s ago"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:371
+msgid "on %s"
+msgstr ""
+
+#: I18n/RelativeTimeFormatter.php:47;126;316
+msgid "{0} year"
+msgid_plural "{0} years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:51;129;319
+msgid "{0} month"
+msgid_plural "{0} months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:57;132;322
+msgid "{0} week"
+msgid_plural "{0} weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:59;135;325
+msgid "{0} day"
+msgid_plural "{0} days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:64;138
+msgid "{0} hour"
+msgid_plural "{0} hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:68;141
+msgid "{0} minute"
+msgid_plural "{0} minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: I18n/RelativeTimeFormatter.php:72;144
+msgid "{0} second"
+msgid_plural "{0} seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Network/Response.php:1451
+msgid "The requested file was not found"
+msgstr ""
+
+#: ORM/RulesChecker.php:57
+msgid "This value is already in use"
+msgstr ""
+
+#: ORM/RulesChecker.php:104
+msgid "This value does not exist"
+msgstr ""
+
+#: ORM/RulesChecker.php:128
+msgid "The count does not match {0}{1}"
+msgstr ""
+
+#: Utility/Text.php:894
+msgid "and"
+msgstr ""
+
+#: Validation/Validator.php:103
+msgid "This field is required"
+msgstr ""
+
+#: Validation/Validator.php:104
+msgid "This field cannot be left empty"
+msgstr ""
+
+#: Validation/Validator.php:1712
+msgid "The provided value is invalid"
+msgstr ""
+
+#: View/Helper/FormHelper.php:961
+msgid "New %s"
+msgstr ""
+
+#: View/Helper/FormHelper.php:964
+msgid "Edit %s"
+msgstr ""
+
+#: View/Helper/HtmlHelper.php:781
+msgid "Home"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:539
+msgid "January"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:540
+msgid "February"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:541
+msgid "March"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:542
+msgid "April"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:543
+msgid "May"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:544
+msgid "June"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:545
+msgid "July"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:546
+msgid "August"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:547
+msgid "September"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:548
+msgid "October"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:549
+msgid "November"
+msgstr ""
+
+#: View/Widget/DateTimeWidget.php:550
+msgid "December"
+msgstr ""
+

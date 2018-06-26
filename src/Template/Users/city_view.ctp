@@ -1,0 +1,1096 @@
+<style type="text/css">
+.faq-section .fq_main h3 {
+    background: #aa1d2d none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    margin: -7px 0 0 -7px;
+    padding: 10px 38px;
+}
+.miles{
+    float: right;
+}
+</style>
+
+<div class="mid_wrapper city-page"><?php 
+	$cityName = isset($cityDetail->name) ? $cityDetail->name : $slug;
+	$whtr_city = str_replace(' ','',$cityName);
+	$countryName = isset($cityDetail->country->name) ? $cityDetail->country->name : ''; ?>
+	<?php if(isset($images) && !$images->isEmpty()){ ?>
+	<div class="cityBanner">
+		<div id="allslider" class="">
+			<ul class="slides">
+			<?php foreach($images as $key => $img){ ?>
+
+				<li	<?php if($key > 0){ ?>style="display:none" <?php  } ?>>
+					<div class="citySlide">
+					<?php if($key == 0){ ?>
+						<img alt="Image" src="<?php echo CASINO_FULL_IMG_URL.$img->file ?>" />
+					<?php }else{ ?>
+						<img alt="img"  id="<?php echo $key; ?>_img" class="lazy" src="<?php echo WEBSITE_IMG_URL.'camera-loader.gif' ?>" data-src="<?php echo CASINO_FULL_IMG_URL.$img->file ?>" />
+					<?php } ?>
+						<div class="slideCptin">
+							<h1><?php echo $cityDetail->name; ?></h1>
+							<h2><?php echo $countryName; ?></h2>
+							<!--  <div class="block"><a   href="javascript:void(0);"  data-type="city" data-id="<?php // echo $cityDetail->id; ?>" class="add-photos-click btn addBtn"><i class="fa fa-camera"></i>Add a Photo</a></div> -->
+						</div>
+					</div>
+				</li>
+			<?php } ?>
+			</ul>
+		</div>
+		<div class="cityThumb">
+			<div class="container">
+				<div id="allcarousel" class="carousel-box thumbSlide">
+					<ul class="slides mouse-pointer">
+						<?php 
+						$count	=	$num_of_img = 0;
+						foreach($images as $img){ $num_of_img++;}
+				//if num_of_img is greater than one than show images to that city		
+
+
+
+				if($num_of_img > 1) {
+
+
+
+						foreach($images as $img){ $count++; ?>							
+
+
+
+							<li id="<?php echo ($count == 1) ? 'actimg' : ''; ?>"><img alt="img" src="<?php echo WEBSITE_URL.'image.php?width=150px&height=75px&cropratio=2:1&image='.CASINO_FULL_IMG_URL.$img->file ?>" /></li>
+
+
+
+						<?php } ?>
+
+
+
+					</ul>
+
+
+
+					<?php if($count >8){ ?>
+
+
+
+					 <div class="thumbNav">
+
+
+
+						<a href="javascript:void(0)" class="prev"><img alt="img" src="<?php echo WEBSITE_IMG_URL ?>ic2.png" alt="icon" /></a>
+
+
+
+						<a href="javascript:void(0)" class="next"><img alt="img" src="<?php echo WEBSITE_IMG_URL ?>ic3.png" alt="icon" /></a>
+
+
+
+					 </div>
+
+
+
+					<?php } 
+
+
+
+				} ?>
+
+
+
+				</div>
+
+
+
+			</div>
+		</div>
+	</div> 	
+  <?php }else{ ?>
+
+	<div class="cityBanner contrybanner ">
+
+
+
+		<div class="citySlide city_Banner2"><img src="<?php echo WEBSITE_URL ?>images/city_img3.jpg" alt="img">
+
+
+
+			<div class="slideCptin">				  
+
+
+
+				<div class="container">
+
+
+
+					<h1><?php echo $cityName; ?></h1>
+
+
+
+					<h2><?php echo $countryName/* .'/';
+
+
+
+					echo isset($cityDetail->name) ? $cityDetail->name : $slug; 
+
+
+
+					AddCity  Addcity2 Addcity_page2
+
+
+
+					*/ ?></h2>
+
+
+
+				  	<div class="block"><a   href="javascript:void(0);"  data-type="city" data-id="<?php echo $cityDetail->id; ?>" class="add-photos-click btn addBtn"><i class="fa fa-camera"></i>Add a Photo</a></div>
+
+
+
+				</div>
+
+
+
+			</div>
+
+
+
+		</div>
+	</div>
+  <?php } ?>
+
+
+
+    <div class="ed_inf">
+
+		<div class="filter_2N new-block">
+
+			<div class="fil_block new-fil-block">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-md-12">
+
+							<ul>
+								<li class="active"><a href="">About <?php echo $cityDetail->name; ?></a></li>
+
+								<li><a href="casinos/<?php echo $cityDetail->slug; ?>"><?php echo $cityDetail->name; ?> Casinos</a></li>
+
+								<li><a href=""><?php echo $cityDetail->name; ?> Hotels</a></li>
+
+							</ul>
+
+							<div class="pull-right">
+
+								<a href=""><img src="<?php echo WEBSITE_URL?>images/edit-info.png">
+
+								<span> Edit Info</span></a> 
+
+								<a  href="javascript:void(0);"  data-type="city" data-id="<?php echo $cityDetail->id; ?>" class="add-photos-click"><img src="<?php echo WEBSITE_URL?>images/ad-photo.png">
+
+							<span>Add Photos</span></a> 
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="clowdInfo" data-ng-app="myApp" >
+
+
+
+   <?php //echo $this->element('add_review_popup'); ?>
+
+
+
+    <div class="container">
+
+
+
+		<div class="clowdTop">
+
+
+
+         <?php /*//uncomment this for add reviews
+
+
+
+	        <div class="pull-left">
+
+
+
+	        	<a href="javascript:void(0);" data-name="<?php echo $cityDetail->name; ?>" data-type="city" data-id="<?php echo $cityDetail->id; ?>" class="btn red_btn city-click add-rvw-btn hide">Add Review</a>
+
+
+
+	        </div>
+
+
+
+	        <div class="pull-right">
+
+
+
+	        	<a href="">Add Info</a> <span>/</span> <a  href="javascript:void(0);"  data-type="city" data-id="<?php echo $cityDetail->id; ?>" class="add-photos-click">Add Photos</a> 
+
+
+
+	        </div> */?>      </div>
+
+
+
+      <div class="row">
+
+
+
+        <div class="col-lg-6 col-md-6">
+
+
+
+          <div class="clowdRight">
+
+
+
+            <h2>Information</h2>
+
+
+
+            <div class="clowdIn col_info2">
+
+
+
+              <div class="col">
+
+
+
+                <div class="informa_info">
+
+
+
+                <h4>Population</h4>
+
+
+
+                <p><?php echo $cityDetail->population ?> hab.</p>
+
+
+
+                <div class="pull-left"><img src="<?php echo WEBSITE_URL; ?>images/poblacion_icon.png" alt="icon" width="32" height="37"></div>
+
+
+
+              </div>
+
+
+
+              </div>
+
+
+
+              <div class="col">
+
+
+
+                <div class="informa_info">
+
+
+
+                <h4>Gambling</h4>
+
+
+
+                <p><?php echo $this->request->params['paging']['Casinos']['count']; ?> Casinos</p>
+
+
+
+                <div class="pull-left"><img src="<?php echo WEBSITE_URL; ?>images/casino_icon2.png" alt="icon" width="37" height="37"></div>
+
+
+
+              </div>
+
+
+
+              </div>
+
+
+
+              <div class="col">
+
+
+
+                <div class="informa_info">
+
+
+
+                <h4>Altitude</h4>
+
+
+
+                <p><?php echo $cityDetail->altitude ?> m s. n. m.</p>
+
+
+
+                <div class="pull-left"><img src="<?php echo WEBSITE_URL; ?>images/Altitud_img.png" alt="icon" width="46" height="26"></div>
+
+
+
+              </div>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-lg-6 col-md-6" data-ng-controller="myCtrl">
+
+
+
+          <div class="clowdRight">
+
+
+
+            <h2>Current Forecast <span><a target="_blank" href="http://www.openweathermap.com/" class="mouse-pointer">by openweathermap</a></span></h2>
+
+
+
+            <div class="clowdIn loading">
+
+
+
+				<p class="text-center">Loading...</p>
+
+
+
+			</div>
+
+
+
+            <div class="clowdIn hide weather">
+
+
+
+              <div class="col">
+
+
+
+                <div class="pull-left">
+
+
+
+					<h3>
+
+
+
+						<span data-ng-show="!temp">{{Temp_f}}<sup><span data-ng-class="temp ? 'active' : ''" data-ng-click="temp=false"> &nbsp; °F</span> | <span data-ng-class="!temp ? 'active' : ''" data-ng-click="temp=true">°C</span></sup></span>
+
+
+
+						<span data-ng-show="temp">{{Temp_c}}<sup><span data-ng-class="temp ? 'active' : ''" data-ng-click="temp=false"> &nbsp; °F</span> | <span data-ng-class="!temp ? 'active' : ''" data-ng-click="temp=true">°C</span></sup></span>
+
+
+
+					</h3>
+
+
+
+                </div>
+
+
+
+                <div class="pull-right">
+
+
+                	<img src="<?php echo WEBSITE_URL; ?>images/10n.png" alt="icon" width="46" height="26">
+					
+
+
+
+				</div>
+
+
+
+              </div>
+
+
+
+              <div class="col">
+
+
+
+				<div class="dgriCol m"><span>Wind Speed</span><span data-ng-show="temp">{{wind_speed_c | number : 0 }} km/h</span><span data-ng-show="!temp">{{wind_speed_f | number : 0 }} mph</span></div>
+
+
+
+             
+
+
+
+                <div class="dgriCol m"><span>Humidity</span><span>{{humidity}}%</span></div>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="casino_desc">
+
+
+
+  <script>loctn = [];</script>
+
+
+
+    <div class="container">
+
+    		<div class="title">
+	         	<h2><?php echo $cityDetail->first_head;?> </h2>
+	          	<span><?php echo $cityDetail->first_block;?></span>       
+	        </div>
+
+	
+			<div class="title cuntery_Title">
+				<h2>Best Casinos in <?php echo isset($cityDetail->name) ? $cityDetail->name : ''; ?></h2>
+			</div>
+
+		<?php 
+
+		if(!$casinosData->isEmpty()){?>
+			<div class="explore-img explore-img1 shadwo_none">
+
+                <ul>
+		<?php
+		$limitc = 0; 
+		$results=array();
+			foreach($casinosData as $casino){  
+			$limitc ++;
+			if($limitc  < 7) {
+
+			 ?>                                
+	            <li class="explore_links popluler_indexbox">
+
+	                <a href="<?php $murl= '';
+
+	                             if($casino->type == 'normal'){
+
+	                             	$murl = $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+	                             echo $murl;
+
+	                             }else{
+
+	                             	$murl = $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+
+	                             echo $murl;
+	                             }
+
+	                             ?>">
+
+	                    <div class="img_block">
+	                       <?php 
+
+	                          if(!empty($casino->image) && file_exists(CASINO_FULL_IMG_ROOT_PATH.$casino->image)){
+
+	                          echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?height=233px&cropratio=1:1&image='.CASINO_FULL_IMG_URL.$casino->image,['alt' =>"Image loading"]);
+
+	                          }else{
+
+	                          echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=280px&height=233px&cropratio=1:1&image='.NO_CASINO_IMG,['class' => 'img-responsive','alt' =>"Image loading"]);
+
+	                          }  ?>	                   
+
+	                    </div>
+
+	                </a>
+
+	            <!--popular part start-->
+
+                    <div class="most_pop_box">
+
+                        <a class="cas_indx" href="<?php 
+
+                                 if($casino->type == 'normal'){
+
+                                 echo $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+
+                                 }else{
+
+                                 echo $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+
+                                 }
+
+                                 ?>"> 
+
+                              <h4><?php echo $casino->title ?></h4>
+
+                        </a>
+
+                        <a class="clientRating readonly star_box" data-score="<?php echo $casino->avg_rating; ?>"></a>
+
+                        <a href="javascript:void(0);" class="Opinion_text"> <span>
+
+                                 <?php
+
+                                 echo $casino->review_count;
+
+                                 if($casino->review_count   > 1)
+
+                                    echo ' Opinions';
+
+
+                                 else
+
+                                    echo ' Opinion';?>
+
+                              </span>
+                        </a>
+
+                         <p class="text_para"><?php echo $cityName; ?>,
+
+                                 <?php echo $countryName; ?>                               
+
+                        </p>  
+                    </div>    
+
+	            </li><?php 
+
+	            }
+
+	            if($casino->type == 'normal'){
+
+                 $murl1 = $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+
+
+
+                }else{
+
+                 	$murl1 = $this->Url->build(['plugin' => '','controller' => 'Casinos','action' => 'casino_view','casino_view' => $casino->slug]);
+
+                 }
+
+	            ?>
+
+	            <script>
+
+                 	loctn.push(['<?php echo str_replace("'","",$casino->title); ?>','<?php echo str_replace("'","",$casino->address); ?>','<?php echo str_replace("'","",$murl1); ?>']);
+
+                 	//alert(loctn);
+                 </script>
+
+	            <?php
+				array_push($results,array("title"=>$casino->title,"address"=>$casino->address));
+
+			//$title[]=$casino->title;
+			//$address[]=$casino->title;
+	        } 
+			//echo json_encode($results);
+
+			?>
+                </ul>
+               </div>
+
+			<?php	}else{
+
+				?><div class="text-center h500 n_rec">No Record Found</div><?php
+			}
+	/*echo $this->element('country_page_pagination',['url' =>$this->Url->build(['plugin' => '','controller' => 'Users','action' => 'city_view','country' => $countrySlug,'city' => $slug])]);*/
+
+		?>
+
+		<div class="city_description">
+		    <div class="row">
+			    <div class="col-md-12">
+			        <!-- <div class="title">
+
+			         		<h2><?php echo $cityDetail->first_head;?> </h2>
+
+			          		<span><?php echo $cityDetail->first_block;?></span>        
+			        </div> -->
+			        <div class="gamblingBox gamblingBox_new">
+						<div class="detail_map">
+							<!-- <h2>Map</h2> -->
+							<div id="map_canvas"></div>
+				        </div>	
+				  	</div>
+
+				  	<section class="gambling">
+					    <div class="container">
+					      <h2>Cities Near <?php echo $cityName; ?></h2>
+					      <ul>
+					      <?php if(isset($countryCity) && !empty($countryCity)){ $countcity = 1;
+					        foreach ($countryCity as $key => $countryCitys) { 
+					          if(!empty($cityDetail->latitude) && !empty($countryCitys->latitude)){
+					            $lat1 = $cityDetail->latitude;
+					            $lon1 = $cityDetail->longitude;
+					            $lat2 = $countryCitys->latitude;
+					            $lon2 = $countryCitys->longitude;
+					            $distancedetails = $this->SocialShare->get_meters_between_points($lat1, $lon1, $lat2, $lon2);
+					            $miles = $distancedetails / 1609.34;
+					            $miles = round($miles);
+					            $countcity++;
+					        	}else{
+					        		$miles = "no";
+					        	}
+					        	if($miles != 'no'){ 
+					        		if($countcity <= 7){ 
+					         			$countrydetails = $this->SocialShare->countryslug($countryCitys->country_id);
+					          			//echo $countrydetails->slug; 
+					          	?>
+							        <li>
+							          <a href="<?php echo $this->Url->build(array('controller' => 'users','action' => 'city_view','country' => $countrydetails->slug,'city' => $countryCitys->slug)); ?>">
+							          <?php if(isset($countryCitys->image) && !empty($countryCitys->image)){ ?>
+							            <img src="files/<?php echo $countryCitys->image; ?>" alt="img"> <?php
+							          }else{ ?>
+							            <img src="../images/gambling-cities-img.jpg" alt="img"> <?php
+							          } ?>
+							          </a>
+							          <div class="gambling-cities-dec">
+							            <a href="<?php echo $this->Url->build(array('controller' => 'users','action' => 'city_view','country' => $countrydetails->slug,'city' => $countryCitys->slug)); ?>"><h3><?php echo $countryCitys->name; ?>  <p class="miles"><?php echo $miles; ?> mi</p></h3></a>
+							            <span><p class="readonly read_num" data-score="<?php echo $countryCitys->avg_rating; ?>"></p><p><?php echo $countryCitys->avg_rating; ?> opinions</p></span>
+							            <!--<span><img src="../images/star-rating.png" alt="img-rating"> <?php echo $countryCity->review_count; ?> opinions</span> -->
+							            <span><p class="pull-left"><?php echo $countrydetails->name; ?></p> <p class="pull-right"><?php echo $countryCitys->casino_count; ?> Casinos</p></span>
+							          </div>
+							        </li>
+					        	<?php
+					        		}	
+					        	}
+					        }
+					      } ?>
+					      </ul>
+					    </div>
+					</section>
+
+
+			        <?php if(!empty($cityDetail->second_blok)) {?>
+			        <div class="title">
+			        	<h2>Casinos in <?php echo $cityName;?> </h2>
+			          	<span><?php echo $cityDetail->second_blok;?></span>         
+			        </div><?php }?>
+			    <!-- </div>
+			    <div class="col-md-4"> -->	
+<section class="faq-section">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-12">
+	<div class="fq_main">
+	<h3>Best hotels in <?php echo $cityName;?></h3>
+	<div class="fq-content">
+	<p>Working</p>	
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+			    </div>
+		    </div>
+		</div>
+
+<div class="clint_info_post qs_rwv">
+
+				<?php echo $this->element('normal_casino_review_json',['name' => $cityDetail->name,'id' => $cityDetail->id,'type' => 'city','count' => $cityDetail->review_count,'avg_rating' => $cityDetail->avg_rating]);
+
+					echo $this->element('question_answer_json',['name' => $cityDetail->name,'id' => $cityDetail->id,'type' => 'city','count' => $cityDetail->question_count]);
+
+
+				?>
+
+			</div>
+
+	</div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<?php 
+
+//echo $this->Html->script(['https://maps.googleapis.com/maps/api/js?v=3&libraries=geometry%2Cplaces&key&language='.$Defaultlanguage.'&key=AIzaSyBBdogOQc5VTADJPW0PDRqxhFsEVFJQgys','masonry.js'],array('block' =>'custom_script'));
+
+echo $this->Html->script(['https://maps.googleapis.com/maps/api/js?v=3&libraries=geometry%2Cplaces&key&language='.$Defaultlanguage.'&key=AIzaSyCMhDWSllv2IvaQL40G9rro0aHkeak9GoY','masonry.js'],array('block' =>'custom_script'));
+
+$this->Html->scriptStart(array('block' => 'custom_script')); ?>
+
+var geocoder;
+
+var map;
+
+var address = "<?php echo (isset($cityDetail->name)) ? $cityDetail->name.'&nbsp;&nbsp;' : $slug; echo isset($cityDetail->country->name) ? $cityDetail->country->name : ''; ?>";
+
+loctn.push(['<?php echo str_replace("'","",$cityDetail->name); ?>',address,'<?php echo '#'; ?>']);
+
+<!-- new map starts from here -->
+
+//google.maps.event.addDomListener(window, 'load', initialize);
+
+		var bounds = new google.maps.LatLngBounds();
+
+		var geocoder;
+
+		var map;
+
+		var bounds = new google.maps.LatLngBounds();
+
+		function initialize() {
+
+			map = new google.maps.Map(
+
+			document.getElementById("map_canvas"), {
+
+			  center: new google.maps.LatLng(37.4419, -122.1419),
+
+			  zoom: 20,  
+
+			    mapTypeControl: true,
+
+		    mapTypeControlOptions: {
+
+		      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+
+		    },
+    		navigationControl: true,
+
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+
+			});
+
+		  geocoder = new google.maps.Geocoder();
+
+		  for (i = 0; i < loctn.length; i++) {
+
+			geocodeAddress(loctn, i);
+
+		  }
+
+		}
+
+		function geocodeAddress(locations, i) { 
+
+			var title = loctn[i][0];
+
+			var address = loctn[i][1];
+
+		    var url = loctn[i][2];
+
+		    // alert(url);
+
+		  	geocoder.geocode({
+
+			  'address': loctn[i][1]
+
+			},
+
+			function(results, status) { 
+
+				// alert(status);
+
+				if (status == 'OK') { 
+
+					var marker = new google.maps.Marker({
+
+					  	icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+
+						map: map,
+
+						position: results[0].geometry.location,
+
+						title: title,
+
+						center: results[0].geometry.location,
+
+						animation: google.maps.Animation.DROP,
+
+						address: address,
+
+						url: url
+
+					});
+
+					infoWindow(marker, map, title, address, url);  
+
+					bounds.extend(marker.getPosition());
+
+					map.fitBounds(bounds);
+
+					map.panTo(marker.center);
+
+					map.setZoom(13);			
+
+				} else if (status == 'OVER_QUERY_LIMIT') { //alert(title); 
+
+				    setTimeout(function() {
+
+						geocodeAddress(locations, i);
+
+					}, 100);
+
+			    }else {
+
+					alert("Geocode was not successful for the following reason: " + status);
+
+					}
+			}
+			);
+		}
+
+
+		function infoWindow(marker, map, title, address, url) { //alert(title);
+
+		var htmls = "<div><h4><a href="+url+">" + title + "</a></h4><p>" + address + "<br></div></p></div>";
+
+		  google.maps.event.addListener(marker, 'click', function() {
+
+			var html = "<div><h4><a href="+url+">" + title + "</a></h4><p>" + address + "<br></div></p></div>";
+
+			iw = new google.maps.InfoWindow({
+
+			  content: html,
+
+			  size: new google.maps.Size(150, 50)
+
+			});
+
+			iw.open(map, marker);
+
+		  }); 	  
+
+		}
+
+		function createMarker(results) {
+
+		    var marker = new google.maps.Marker({
+
+				icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+
+				map: map,
+
+				position: results[0].geometry.location,
+
+				title: title,
+
+				animation: google.maps.Animation.DROP,
+
+				address: address,
+
+				url: url
+
+		    })
+
+		    bounds.extend(marker.getPosition());
+
+		    map.fitBounds(bounds);
+
+		    infoWindow(marker, map, title, address, url);
+
+		    return marker;
+
+		}				
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+	<!-- new map ends here -->
+
+	var app = angular.module('myApp', []);
+
+	app.controller('myCtrl', function($scope, $http) {
+
+		$http.get("http://api.openweathermap.org/data/2.5/weather?q=<?php echo $whtr_city.','.$countryName ?>&appid=858c699462f8c4ace63f729323c20adf")
+
+		.then(function(response) {
+
+			if(response.data.cod != 404){
+
+				Temp_c 					= Math.round(10*(response.data.main.temp -273.15))/10 ;
+
+				$scope.Temp_c 			= Temp_c.toFixed(); ;
+
+				wind_speed_c 			=  (3600*response.data.wind.speed)/1000;
+
+				wind_speed_f			=	0.62 * wind_speed_c;
+
+				$scope.wind_speed_c 	=  wind_speed_c.toFixed(); 
+
+				$scope.wind_speed_f = wind_speed_f.toFixed();
+
+				Temp_f 			=  Math.round((10*(response.data.main.temp -273.15))/10) * 9/5 + 32;
+
+				// Temp_f			=	10.5555555555555555555;
+
+				$scope.Temp_f 	=  Temp_f.toFixed(); 
+
+				$scope.humidity 		=  response.data.main.humidity;
+
+				$scope.icon		 		= 'http://openweathermap.org/img/w/'+response.data.weather[0]['icon']+'.png';
+
+				$scope.no_rec		=	false;
+
+			}else{
+
+				$scope.no_rec		=	true;
+			}
+
+				$(".loading").addClass('hide');
+
+				$(".weather").removeClass('hide');
+
+		});
+
+	});
+
+
+		$(".prev").click(function() {
+
+			$('#allcarousel').flexslider("prev")
+
+		});
+
+		$(".next").click(function() {
+
+			$('#allcarousel').flexslider("next")
+
+		});
+
+		$('#allcarousel').flexslider({
+
+			animation: "slide",
+
+			controlNav: false,
+
+			animationLoop: false,
+
+			slideshow: false,
+
+			itemWidth: 120,
+
+			maxItems: 8,
+
+			minItems: 8,
+
+			directionNav: false,
+
+			itemMargin: 0,
+
+			asNavFor: '#allslider'		
+		});
+
+
+	$('#allslider').flexslider({
+
+		animation: "fade",
+
+		controlNav: false,
+
+		animationLoop: false,
+
+		slideshow: false,
+
+		sync: "#allcarousel",
+
+		directionNav: false,
+
+		before: function (slider) {
+
+		  var slides 	= slider.slides,
+
+			index 		= slider.animatingTo,
+
+			$slide 		= $(slides[index]),
+
+			$img 		= $slide.find('img[data-src]'),
+
+			current 	= index,
+
+			nxt_slide 	= current + 1,
+
+			prev_slide 	= current - 1;
+
+		  	$slide
+
+			.parent()
+
+			.find('img.lazy:eq(' + current + '), img.lazy:eq(' + prev_slide + '), img.lazy:eq(' + nxt_slide + ')')
+
+			.each(function () {
+
+				var src = $(this).attr('data-src');
+
+				$(this).attr('src', src).removeAttr('data-src');
+
+			});/* 
+
+			$("#"+current+"_img").removeClass('lazy');
+
+			$("#"+nxt_slide+"_img").removeClass('lazy');
+
+			$("#"+prev_slide+"_img").removeClass('lazy'); */
+
+		}
+
+	});	
+
+<?php $this->Html->scriptEnd(); 	echo $this->element('add_info_popup',['type' => 'city','foreign_key' => $cityDetail->id]);
+
+ ?>
+
+
+

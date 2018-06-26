@@ -1,0 +1,4 @@
+[27-Jul-2016 11:34:58 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/casinolineup/public_html/webroot/cron/index.php on line 47
+[27-Jul-2016 11:35:50 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/casinolineup/public_html/webroot/cron/index.php on line 47
+[27-Jul-2016 11:38:52 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/casinolineup/public_html/webroot/cron/index.php on line 47
+[27-Jul-2016 11:40:01 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/casinolineup/public_html/webroot/cron/index.php on line 46

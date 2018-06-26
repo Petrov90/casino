@@ -1,0 +1,342 @@
+<?php use Cake\Utility\Inflector; ?>
+<div class="banner_inner banner_back_img banner_land_based"> 
+  <div class="banner">
+   <div class="transparent-black bonuses">
+      <div class="container">
+         <div class="banner-content">
+            <h1>Discover the best Casnios</h1>
+            <div class="search-back">
+               <div class="top-search" data-ng-app>
+                  <div class="form-group">
+                    <input type="text" name="search" placeholder="Casino name or destination">
+                  </div>
+                  <a data-ng-href="<?php echo WEBSITE_URL; if($Defaultlanguage != 'en'){ echo $Defaultlanguage.'/'; } ?>search/{{city_name}}" class="search-back-a"><?= __('homepage.search'); ?></a>       
+               </div>
+            </div>
+         </div>
+      </div>
+   </div><?php /*
+   <div class="find_line"><?php echo (!empty($allBlocks[3]->_translations[$Defaultlanguage]->description)) ? $allBlocks[3]->_translations[$Defaultlanguage]->description : $allBlocks[3]->_translations['en']->description ; ?></div>*/ ?>
+</div>
+</div>
+
+<div class="mid_wrapper">
+  <div class="worldwide-dir">
+    <div class="container">
+      <h2>hjdshfkjdsf dsfds</h2>
+      <div class="diectory-content">
+        <div class="gambling-div">
+          <p>dsjfdsjf kdsjfds sdjfds sdkf ds  sdjfjd sdjfjdsfj</p>
+        </div>
+        <div class="most-compre">
+          <span>jhf jdfjd kjksjdf kjkjd</span>
+          <ul>
+            <li>
+              <img src="<?php echo GALLERY_IMG_URL.$cat->back_image; ?>">
+              <span>36204</span>
+              <p>hhfd kdsjfds  dsjfj</p>
+            </li>
+            <li>
+              <img src="<?php echo GALLERY_IMG_URL.$cat->back_image; ?>">
+              <span>36204</span>
+              <p>hhfd kdsjfds  dsjfj</p>
+            </li>
+            <li>
+              <img src="<?php echo GALLERY_IMG_URL.$cat->back_image; ?>">
+              <span>36204</span>
+              <p>hhfd kdsjfds  dsjfj</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="gamble_online land_based_info">
+
+  <div class="container">
+
+  <div class="title">
+
+        <h2><?php echo (isset($headBlock->_translations[$Defaultlanguage]->sub_title) && !empty($headBlock->_translations[$Defaultlanguage]->sub_title)) ? $headBlock->_translations[$Defaultlanguage]->sub_title : $headBlock->_translations['en']->sub_title; ?></h2>
+
+        <div><?php echo (isset($headBlock->_translations[$Defaultlanguage]->sub_title_description) && !empty($headBlock->_translations[$Defaultlanguage]->sub_title_description)) ? $headBlock->_translations[$Defaultlanguage]->sub_title_description : $headBlock->_translations['en']->sub_title_description; ?></div>
+
+        <span></span> </div>
+
+		<div class="ChooosetypeRow">
+
+  <?php foreach($Continents as  $cat){ ?>
+
+				<div class="col col_bml2">
+
+			<a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'users','action' =>  Inflector::camelize(Inflector::underscore($cat->slug)))); ?>">
+
+				   <div class="block"><div class="block_2"><i><img src="<?php echo GALLERY_IMG_URL.$cat->back_image; ?>" alt="<?=$cat->_translations['en']->icon_title?>"></i><i class="fa"><img src="<?php echo GALLERY_IMG_URL.$cat->head_image; ?>" alt="<?=$cat->_translations['en']->icon_title?>"></i></div></div>
+
+				   <div class="col_block"><span><?php  echo (!empty($cat->_translations[$Defaultlanguage]->icon_title)) ? $cat->_translations[$Defaultlanguage]->icon_title : $cat->_translations['en']->icon_title; ?></span></div>
+
+			</a>
+
+				</div>
+
+  <?php } ?>  
+
+  </div>
+
+  </div>
+
+  </div>
+
+  <?php if(!empty($cities)){ ?>
+
+  <div class="casino_info">
+
+  <div class="container">
+
+  <div class="title">
+
+        <h2><?php echo (isset($headBlock->_translations[$Defaultlanguage]->middle_title) && !empty($headBlock->_translations[$Defaultlanguage]->middle_title)) ? $headBlock->_translations[$Defaultlanguage]->middle_title : $headBlock->_translations['en']->middle_title; ?></h2>
+
+        <div><?php echo (isset($headBlock->_translations[$Defaultlanguage]->middle_title_description) && !empty($headBlock->_translations[$Defaultlanguage]->middle_title_description)) ? $headBlock->_translations[$Defaultlanguage]->middle_title_description : $headBlock->_translations['en']->middle_title_description; ?></div>
+
+        <span></span> </div>
+
+        <div class="casino_city">
+
+        <ul>
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view' => $cities[0]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[0]->image) && file_exists(GALLERY_ROOT_PATH.$cities[0]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[0]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[0]->city->name; ?></h2>
+
+        <p><?php echo $cities[0]->city->review_count; ?> Reviews</p>
+
+        </div></a>
+
+        </li>
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[1]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[1]->image) && file_exists(GALLERY_ROOT_PATH.$cities[1]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[1]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[1]->city->name; ?></h2>
+
+        <p><?php echo $cities[1]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[2]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[2]->image) && file_exists(GALLERY_ROOT_PATH.$cities[2]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[2]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[2]->city->name; ?></h2>
+
+        <p><?php echo $cities[2]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[3]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[3]->image) && file_exists(GALLERY_ROOT_PATH.$cities[3]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=462px&height=161px&cropratio=2:1&image='.GALLERY_IMG_URL.$cities[3]->image,['alt' => 'image','class' => 'img-responsive','height' => '462','width' => '161']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[3]->city->name; ?></h2>
+
+        <p><?php echo $cities[3]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        </ul>
+
+        <ul class="nxt-info">
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[4]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[4]->image) && file_exists(GALLERY_ROOT_PATH.$cities[4]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=462px&height=161px&cropratio=2:1&image='.GALLERY_IMG_URL.$cities[4]->image,['alt' => 'image','class' => 'img-responsive','height' => '462','width' => '161']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[4]->city->name; ?></h2>
+
+        <p><?php echo $cities[4]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+		<li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[5]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[5]->image) && file_exists(GALLERY_ROOT_PATH.$cities[5]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[5]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[5]->city->name; ?></h2>
+
+        <p><?php echo $cities[5]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+		<li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[6]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[6]->image) && file_exists(GALLERY_ROOT_PATH.$cities[6]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[6]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[6]->city->name; ?></h2>
+
+        <p><?php echo $cities[6]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+		<li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[7]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[7]->image) && file_exists(GALLERY_ROOT_PATH.$cities[7]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=157px&height=217px&cropratio=1:1&image='.GALLERY_IMG_URL.$cities[7]->image,['alt' => 'image','class' => 'img-responsive','height' => '217','width' => '157']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[7]->city->name; ?></h2>
+
+        <p><?php echo $cities[7]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        </ul>        
+
+        <ul class="half_col">
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[8]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[8]->image) && file_exists(GALLERY_ROOT_PATH.$cities[8]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=580px&height=277px&cropratio=2:1&image='.GALLERY_IMG_URL.$cities[8]->image,['alt' => 'image','class' => 'img-responsive','height' => '277','width' => '580']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[8]->city->name; ?></h2>
+
+        <p><?php echo $cities[8]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        <li><a href="<?php echo $this->Url->build(array('plugin' => '','controller' => 'casinos','action' => 'casino_view' ,'casino_view'  =>$cities[9]->city->slug)); ?>"><?php
+
+			 if(!empty($cities[9]->image) && file_exists(GALLERY_ROOT_PATH.$cities[9]->image)){
+
+			 echo $this->Html->image(WEBSITE_UPLOADS_URL.'image.php?width=580px&height=277px&cropratio=2:1&image='.GALLERY_IMG_URL.$cities[9]->image,['alt' => 'image','class' => 'img-responsive','height' => '277','width' => '580']);
+
+			 } ?>
+
+        <div class="casino_detail">
+
+        <h2><?php echo $cities[9]->city->name; ?></h2>
+
+        <p><?php echo $cities[9]->city->review_count; ?> Reviews</p>
+
+        </div></a></li>
+
+        </ul>
+
+        </div>
+
+  </div>
+
+  </div>
+
+  <?php } ?>
+
+  <div class="hotels  hotels_info_2 htl_tarea section-popular">
+
+  <div class="container">
+
+        
+
+        <div class="title">
+
+        <h3><?= __('land_based_casino.hotels_in_popular_destination_find_hotels_motels_near_you'); ?></h3>
+
+        <span></span> </div>
+
+ <?php echo $this->element('worldwide_popular_casino'); ?>
+
+ </div>
+
+  </div>
+
+  
+
+  
+
+  <div class="gamble_online gamble_online_info2 gamble_online_land_based">
+
+  <div class="container">
+
+   <div class="title">
+
+        <h2><?php echo (isset($headBlock->_translations[$Defaultlanguage]->footer_main_title) && !empty($headBlock->_translations[$Defaultlanguage]->footer_main_title)) ? $headBlock->_translations[$Defaultlanguage]->footer_main_title : $headBlock->_translations['en']->footer_main_title; ?></h2><div><?php echo (isset($headBlock->_translations[$Defaultlanguage]->description) && !empty($headBlock->_translations[$Defaultlanguage]->description)) ? $headBlock->_translations[$Defaultlanguage]->description : $headBlock->_translations['en']->description; ?></div>
+
+        <span></span> </div>
+
+ <div class="gamble_online_post">
+
+  <div class="gamble_online_item">
+
+  <?php echo (isset($headBlock->_translations[$Defaultlanguage]->second_description) && !empty($headBlock->_translations[$Defaultlanguage]->second_description)) ? $headBlock->_translations[$Defaultlanguage]->second_description : $headBlock->_translations['en']->second_description; ?>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  

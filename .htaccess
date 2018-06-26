@@ -1,0 +1,87 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^casinolineup\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^casinoo\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.casinolineup\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "http\:\/\/www\.casinoo\.com\/" [R=301,L]
+  RewriteCond %{HTTP_HOST} ^23\.235\.221\.197
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule    ^$    webroot/    [L]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule    (.*) webroot/$1    [L]
+</IfModule>
+
+<ifModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 12 month"
+  ExpiresByType image/x-icon "access plus 12 month"
+  ExpiresByType image/jpeg "access plus 12 month"
+  ExpiresByType image/png "access plus 12 month"
+  ExpiresByType image/gif "access plus 12 month"
+  ExpiresByType application/x-shockwave-flash "access plus 12 month"
+  ExpiresByType text/css "access plus 12 month"
+  ExpiresByType font/woff "access plus 12 month"
+  ExpiresByType text/javascript "access plus 12 month"
+  ExpiresByType application/javascript "access plus 12 month"
+  ExpiresByType application/x-javascript "access plus 12 month"
+  ExpiresByType text/html "access plus 6 seconds"
+  ExpiresByType application/xhtml+xml "access plus 600 seconds"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</ifModule>
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2592000, public"
+
+</filesMatch>
+
+# compress text, html, javascript, css, xml:
+
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+# Or, compress certain file types by extension:
+<ifModule mod_deflate.c>
+  <filesMatch ".(css|js|x?html?|php)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</ifModule>
+
+# BEGIN Turn ETags Off
+<ifModule mod_headers.c>
+  Header unset ETag
+</ifModule>
+FileETag None
+# END Turn ETags Off
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 36.63.29.211
+
+

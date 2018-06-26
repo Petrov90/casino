@@ -1,0 +1,1 @@
+<?php echo $this->cell('Inbox::news_right_side_bar'); ?>

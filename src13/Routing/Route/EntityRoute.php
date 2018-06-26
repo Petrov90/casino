@@ -1,0 +1,24 @@
+<?php
+namespace App\Routing\Route;
+
+use Cake\Routing\Route\Route;
+
+class EntityRoute extends Route {
+
+    public function match(array $url, array $context = []) {
+		pr($url);die;
+        if (isset($url['_entity'])) {
+
+            $entity = $url['_entity'];
+            preg_match_all('@:(\w+)@', $this->template, $matches);
+
+            foreach($matches[1] as $field) {
+                $url[$field] = $entity[$field];
+            }
+
+        }
+
+        return parent::match($url, $context);
+    }
+
+}

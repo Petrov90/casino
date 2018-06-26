@@ -1,0 +1,1 @@
+notice('Success','<?php echo $message; ?>','success');

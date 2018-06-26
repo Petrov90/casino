@@ -1,0 +1,1 @@
+<?php echo $this->cell('Inbox::casino_side_bar'); ?>

@@ -1,0 +1,31 @@
+{
+	"name": "trentrichardson/cakephp-shrink",
+	"type": "cakephp-plugin",
+	"description": "Compiles, combines, and minifies javascript, coffee, less, scss, and css",
+	"keywords": ["cakephp","javascript","less","css","scss","sass","coffee","minify"],
+	"homepage": "http://github.com/trentrichardson/cakephp-shrink",
+	"license": "MIT",
+	"autoload": {
+	    "psr-4": {
+	        "Shrink\\": "src"
+	    }
+	},
+	"require": {
+		"php": ">=5.4.16",
+		"composer/installers": "*",
+		"cakephp/cakephp": "~3.0",
+        "leafo/lessphp": "0.5.0",
+        "leafo/scssphp": "0.1.1",
+        "natxet/CssMin": "3.0.2",
+        "tedivm/jshrink": "~1.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "4.1.*"
+	},
+	"support": {
+		"source": "https://github.com/trentrichardson/cakephp-shrink"
+	},
+	"extra": {
+		"installer-name": "Shrink"
+	}
+}

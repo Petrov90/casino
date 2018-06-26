@@ -1,0 +1,1 @@
+<?php echo $this->element('review_comments',['comments' => $comments,'reviewId' => $comments->review_id]); ?>
